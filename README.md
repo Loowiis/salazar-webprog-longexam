@@ -21,12 +21,39 @@ The current project is **BulldogEx Shop**, a low-fidelity e-commerce wireframe f
 - Authentication pages for sign in and sign up
 - Shared layout, navbar, footer, and button components
 
+## Fork and Clone Instructions
+
+Fork the original repository first on GitHub. This creates your own copy of the repository under your GitHub account.
+
+After the repository is forked, clone your forked repository to your local device:
+
+1. Go to the root folder where you want to save the project.
+2. Open that folder in **VS Code**.
+3. Open the **VS Code Terminal**.
+4. Run `git clone` using the URL of your forked repository:
+
+```bash
+git clone <forked-repository-url>
+```
+
+Example:
+
+```bash
+git clone https://github.com/your-username/surname-long-exam.git
+```
+
+After cloning the forked repository, go inside the cloned project folder:
+
+```bash
+cd surname-long-exam
+```
+
 ## Project Setup
 
 Install dependencies inside the client app:
 
 ```bash
-cd robles-client
+cd surname-client
 npm install
 ```
 
