@@ -39,18 +39,25 @@ const routes = [
     ],
   },
   {
-    path: "auth/",
+    path: "/signin",
     element: <AuthLayout />,
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "signin",
+        path: "",
         element: <SignInPage />,
       },
+    ],
+  },
+  {
+    path: "/signup",
+    element: <AuthLayout />,
+    errorElement: <NotFoundPage />,
+    children: [
       {
-        path: "signup",
+        path: "",
         element: <SignUpPage />,
-      }
+      },
     ],
   },
 ];

@@ -1,23 +1,22 @@
 import { Link } from 'react-router-dom';
-import Button from '../../components/Button';
 
 const inputClasses =
-  'mt-2 w-full rounded-xl border border-zinc-300 bg-zinc-100 px-4 py-3 text-sm text-zinc-900 outline-none transition placeholder:text-zinc-400 focus:border-zinc-900 focus:bg-zinc-50';
-
-const actionButtonClassName = 'w-full rounded-xl py-3 text-[11px] tracking-[0.2em]';
+  'mt-2 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:bg-gray-50';
 
 const SignUpPage = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl">Sign Up</h1>
-      <p className="mt-3 text-sm leading-6 text-zinc-600">
-        Create a store account for faster checkout, order updates, and pickup details.
-      </p>
+    <div className="space-y-8">
+      <div className="space-y-4">
+        <h1 className="text-4xl font-light tracking-tight text-gray-900 sm:text-5xl">Sign Up</h1>
+        <p className="text-base leading-relaxed text-gray-600">
+          Create a store account for faster checkout, order updates, and pickup details.
+        </p>
+      </div>
 
-      <form className="mt-8 space-y-5">
+      <form className="space-y-6">
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label htmlFor="first-name" className="text-sm font-medium text-zinc-700">
+            <label htmlFor="first-name" className="block text-sm font-light text-gray-700 mb-2">
               First Name
             </label>
             <input
@@ -29,7 +28,7 @@ const SignUpPage = () => {
             />
           </div>
           <div>
-            <label htmlFor="last-name" className="text-sm font-medium text-zinc-700">
+            <label htmlFor="last-name" className="block text-sm font-light text-gray-700 mb-2">
               Last Name
             </label>
             <input
@@ -43,7 +42,7 @@ const SignUpPage = () => {
         </div>
 
         <div>
-          <label htmlFor="signup-email" className="text-sm font-medium text-zinc-700">
+          <label htmlFor="signup-email" className="block text-sm font-light text-gray-700 mb-2">
             Email
           </label>
           <input
@@ -56,7 +55,7 @@ const SignUpPage = () => {
         </div>
 
         <div>
-          <label htmlFor="signup-password" className="text-sm font-medium text-zinc-700">
+          <label htmlFor="signup-password" className="block text-sm font-light text-gray-700 mb-2">
             Password
           </label>
           <input
@@ -66,32 +65,48 @@ const SignUpPage = () => {
             autoComplete="new-password"
             className={inputClasses}
           />
-          <p className="mt-2 text-xs leading-5 text-zinc-500">
+          <p className="mt-2 text-xs leading-5 text-gray-500">
             Use a secure password with letters, numbers, and symbols.
           </p>
         </div>
 
-        <Button type="submit" variant="primary" className={actionButtonClassName}>
+        <button
+          type="submit"
+          className="w-full rounded-lg py-4 text-sm font-light tracking-wide bg-black text-white transition-all duration-300 hover:bg-gray-800"
+        >
           Create Account
-        </Button>
+        </button>
 
         <div className="grid gap-3 pt-2 sm:grid-cols-2">
-          <Button type="button" variant="secondary" className={actionButtonClassName}>
+          <button
+            type="button"
+            className="w-full rounded-lg py-4 text-sm font-light tracking-wide border border-gray-300 text-gray-700 transition-all duration-300 hover:border-gray-400 hover:bg-gray-50"
+          >
             Sign Up with Google
-          </Button>
-          <Button type="button" variant="secondary" className={actionButtonClassName}>
+          </button>
+          <button
+            type="button"
+            className="w-full rounded-lg py-4 text-sm font-light tracking-wide border border-gray-300 text-gray-700 transition-all duration-300 hover:border-gray-400 hover:bg-gray-50"
+          >
             Sign Up with Apple
-          </Button>
+          </button>
         </div>
       </form>
 
-      <div className="mt-8 border-t border-zinc-200 pt-6 text-sm text-zinc-600">
-        Already have an account?{' '}
-        <Link to="/auth/signin" className="font-semibold text-zinc-900 transition hover:text-zinc-600">
-          Log In
-        </Link>
+      <div className="border-t border-gray-200 pt-8 text-sm text-gray-600">
+        <p className="font-light">
+          Already have an account?{' '}
+          <Link to="/signin" className="font-medium text-gray-900 transition hover:text-gray-700">
+            Sign In
+          </Link>
+        </p>
+        <p className="mt-4 font-light">
+          <Link to="/" className="text-gray-500 hover:text-gray-700 transition-colors duration-300">
+            ← Back to Home
+          </Link>
+        </p>
       </div>
-    </>
+    </div>
   );
 };
 
